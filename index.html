@@ -1,0 +1,1779 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="Assets/images/8.ico" />
+
+    <!-- Primary Meta Tags -->
+    <title>Rifki Yuliandra - Informatics Student & Fullstack Developer</title>
+    <meta name="title" content="Rifki Yuliandra - Informatics Student & Fullstack Developer" />
+    <meta name="description" content="Portfolio of Rifki Yuliandra, an Informatics student at Universitas Andalas specializing in Web Development, Data Science, AI, and Mobile Apps." />
+    <meta name="keywords" content="Rifki Yuliandra, Portfolio Rifki Yuliandra, Universitas Andalas, Web Developer, Data Science, AI Enthusiast, Software Engineer" />
+    <meta name="author" content="Rifki Yuliandra" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://rifkiyuliandra.my.id/" />
+    <meta property="og:title" content="Rifki Yuliandra - Informatics Student & Fullstack Developer" />
+    <meta property="og:description" content="Portfolio of Rifki Yuliandra, an Informatics student at Universitas Andalas specializing in Web Development, Data Science, AI, and Mobile Apps." />
+    <meta property="og:image" content="Assets/images/profil-2.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://rifkiyuliandra.my.id/" />
+    <meta property="twitter:title" content="Rifki Yuliandra - Informatics Student & Fullstack Developer" />
+    <meta property="twitter:description" content="Portfolio of Rifki Yuliandra, an Informatics student at Universitas Andalas specializing in Web Development, Data Science, AI, and Mobile Apps." />
+    <meta property="twitter:image" content="Assets/images/profil-2.png" />
+
+    <!-- Schema.org Markup for Google & AI (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Rifki Yuliandra",
+      "url": "https://rifkiyuliandra.my.id/",
+      "image": "Assets/images/profil-2.png",
+      "jobTitle": "Informatics Student & Fullstack Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Universitas Andalas"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Universitas Andalas",
+        "sameAs": "https://www.unand.ac.id/"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/rifki-yuliandra-957774287/",
+        "https://github.com/Alone1011",
+        "https://www.instagram.com/r_kiylndr_/"
+      ],
+      "knowsAbout": ["Web Development", "Data Science", "Artificial Intelligence", "Mobile Apps Development", "UI/UX Design"]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,700;0,800;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              jakarta: ['"Plus Jakarta Sans"', "sans-serif"],
+            },
+            colors: {
+              brand: {
+                blue: "#0062ff",
+                dark: "#0f172a",
+                gray: "#475569",
+                light: "#f9f9f9",
+                muted: "#424656",
+                text: "#1a1c1c",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="Assets/css/style.css">
+  </head>
+  <body class="font-sans text-brand-dark antialiased overflow-x-hidden">
+    <!-- Loader -->
+    <div id="loader" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 99999; display: flex; flex-direction: column; justify-content: center; align-items: center; background-image: url('Assets/images/loading_bg.png'); background-size: cover; background-position: center; overflow: hidden; background-color: #0f172a;">
+      <div class="loader-overlay" style="position: absolute; inset: 0; background: rgba(0,0,0,0.6); z-index: 0;"></div>
+      <div class="loader-text" style="position: relative; z-index: 10; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 24px; font-weight: bold; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 24px; color: white;">Loading...</div>
+      <div class="loader-progress-wrap" style="position: relative; z-index: 10; width: 300px; height: 36px; border: 3px solid white; border-radius: 4px; padding: 3px;">
+        <div class="loader-progress" id="loader-progress" style="width: 0%; height: 100%; background-image: repeating-linear-gradient(to right, white, white 14px, transparent 14px, transparent 20px); border-radius: 1px; position: relative; transition: width 0.1s linear;">
+          <span class="loader-rocket" id="loader-rocket" style="position: absolute; right: -25px; top: 50%; transform: translateY(-50%) rotate(45deg); font-size: 30px; filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));">🚀</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Top Navigation -->
+    <nav
+      id="main-nav"
+      class="fixed top-0 left-0 right-0 w-full h-[76px] bg-transparent transition-all duration-300 z-50 flex items-center justify-between px-6 md:px-[32px] max-w-[1356px] mx-auto"
+    >
+      <a
+        href="#hero"
+        class="font-bold text-2xl tracking-tighter hover:opacity-80 transition-opacity z-50 relative"
+        >RY.</a
+      >
+
+      <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-[40px]">
+        <a href="#selected-works" class="nav-link nav-active" data-section="selected-works">Portfolio</a>
+        <a href="#core-competencies" class="nav-link" data-section="core-competencies">Skills</a>
+        <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+      </div>
+
+      <div class="flex items-center gap-4 z-50 relative">
+        <a
+          href="mailto:rifkiyuliandra875@gmail.com"
+          class="hidden sm:inline-block bg-[#0062ff] text-white px-6 py-2.5 rounded-full font-semibold text-[16px] hover:bg-blue-700 transition-colors"
+        >
+          Let's Talk
+        </a>
+        
+        <!-- Hamburger Icon for Mobile -->
+        <button id="mobile-menu-btn" class="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-[5px] focus:outline-none">
+          <span class="w-6 h-[2px] bg-current transition-transform duration-300 origin-center"></span>
+          <span class="w-6 h-[2px] bg-current transition-opacity duration-300"></span>
+          <span class="w-6 h-[2px] bg-current transition-transform duration-300 origin-center"></span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Overlay -->
+      <div id="mobile-menu" class="fixed inset-0 bg-white/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-opacity duration-300">
+        <a href="#selected-works" class="mobile-nav-link text-2xl font-bold text-[#1a1c1c] hover:text-[#0062ff]">Portfolio</a>
+        <a href="#core-competencies" class="mobile-nav-link text-2xl font-bold text-[#1a1c1c] hover:text-[#0062ff]">Skills</a>
+        <a href="#experience" class="mobile-nav-link text-2xl font-bold text-[#1a1c1c] hover:text-[#0062ff]">Experience</a>
+        <a
+          href="mailto:rifkiyuliandra875@gmail.com"
+          class="sm:hidden bg-[#0062ff] text-white px-8 py-3 rounded-full font-semibold text-xl hover:bg-blue-700 mt-4"
+        >
+          Let's Talk
+        </a>
+      </div>
+    </nav>
+
+    <!-- Header - Hero Section -->
+    <header
+      id="hero"
+      class="relative w-full max-w-[1356px] mx-auto min-h-[685px] pt-[76px] flex flex-col justify-end pb-12 px-6 md:px-8 overflow-hidden"
+    >
+      <!-- Giant Typography Background Marquee -->
+      <div class="absolute top-32 left-0 w-full z-0 whitespace-nowrap overflow-hidden marquee-wrapper" id="hero-marquee">
+        <div class="marquee-content flex gap-8">
+          <h1 class="font-jakarta font-extrabold text-[80px] md:text-[140px] tracking-[-7px] leading-none select-none flex gap-[24px] md:gap-[32px]">
+            <span class="text-[#f9f9f9]" style="-webkit-text-stroke: 3px #1a1c1c">RIFKI</span>
+            <span class="text-[#1a1c1c]">YULIANDRA</span>
+          </h1>
+          <h1 class="font-jakarta font-extrabold text-[80px] md:text-[140px] tracking-[-7px] leading-none select-none flex gap-[24px] md:gap-[32px]">
+            <span class="text-[#f9f9f9]" style="-webkit-text-stroke: 3px #1a1c1c">RIFKI</span>
+            <span class="text-[#1a1c1c]">YULIANDRA</span>
+          </h1>
+          <h1 class="font-jakarta font-extrabold text-[80px] md:text-[140px] tracking-[-7px] leading-none select-none flex gap-[24px] md:gap-[32px]">
+            <span class="text-[#f9f9f9]" style="-webkit-text-stroke: 3px #1a1c1c">RIFKI</span>
+            <span class="text-[#1a1c1c]">YULIANDRA</span>
+          </h1>
+          <h1 class="font-jakarta font-extrabold text-[80px] md:text-[140px] tracking-[-7px] leading-none select-none flex gap-[24px] md:gap-[32px]">
+            <span class="text-[#f9f9f9]" style="-webkit-text-stroke: 3px #1a1c1c">RIFKI</span>
+            <span class="text-[#1a1c1c]">YULIANDRA</span>
+          </h1>
+        </div>
+      </div>
+
+      <!-- Center Image Overlay -->
+      <div
+        class="absolute top-[129px] left-1/2 -translate-x-1/2 z-10 w-full max-w-[320px] md:max-w-[425px] h-[400px] md:h-[556px] fade-in"
+      >
+        <div class="profile-wrapper mix-blend-multiply">
+          <!-- Gambar Hitam Putih Base -->
+          <img src="Assets/images/profil.png" class="profile-base" alt="Rifki Yuliandra - Profile Photo Black and White" />
+          <!-- Gambar Berwarna Overlay (Hanya muncul saat dihover dengan efek mask) -->
+          <img src="Assets/images/profil-2.png" class="profile-color" alt="Rifki Yuliandra - Profile Photo Colored" />
+        </div>
+      </div>
+
+      <div class="relative z-20 flex flex-col md:flex-row justify-between items-start md:items-end w-full gap-8 md:gap-0">
+        <!-- Bottom Left Identity -->
+        <div class="flex flex-col gap-4 max-w-sm w-full">
+          <h2 class="font-jakarta font-bold text-[20px] text-[#1a1c1c] overflow-hidden">
+            <span class="block hero-line">Informatics Student</span>
+          </h2>
+          <p class="font-normal text-[16px] leading-[26px] text-[#424656]">
+            <span class="inline-block overflow-hidden"><span class="block hero-line">Enthusiast in AI, Data Science &</span></span>
+            <span class="inline-block overflow-hidden"><span class="block hero-line">Fullstack Development. Bridging the</span></span>
+            <span class="inline-block overflow-hidden"><span class="block hero-line">gap between logic and human experience.</span></span>
+          </p>
+          <div class="overflow-hidden mt-2">
+            <a
+              href="Assets/documents/Rifki_Yuliandra_CV_AI_Internship.pdf"
+              class="inline-flex items-center gap-2 bg-[#1a1c1c] text-[#f9f9f9] px-8 py-3 rounded-full font-bold text-[16px] hover:bg-black transition-colors w-max hero-line"
+            >
+            Download CV
+            <svg
+              width="10"
+              height="10"
+              viewBox="0 0 10 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 1L9 9M9 9V1.8M9 9H1.8"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+          </div>
+        </div>
+
+        <!-- Bottom Right Socials -->
+        <div class="flex flex-row md:flex-col flex-wrap gap-3 w-full md:w-auto">
+          <a
+            href="https://www.linkedin.com/in/rifki-yuliandra-957774287/"
+            class="border border-slate-300 rounded-full px-6 py-2 text-[14px] font-medium text-[#1a1c1c] hover:bg-slate-100 transition-colors w-36 flex items-center justify-center gap-2 hero-stagger"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+              />
+            </svg>
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/Alone1011"
+            class="border border-slate-300 rounded-full px-6 py-2 text-[14px] font-medium text-[#1a1c1c] hover:bg-slate-100 transition-colors w-36 flex items-center justify-center gap-2 hero-stagger"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+              /></svg
+            >GitHub
+          </a>
+          <a
+            href="https://www.instagram.com/r_kiylndr_/"
+            class="border border-slate-300 rounded-full px-6 py-2 text-[14px] font-medium text-[#1a1c1c] hover:bg-slate-100 transition-colors w-36 flex items-center justify-center gap-2 hero-stagger"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+              /></svg
+            >Instagram
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Walking Text Strip -->
+    <div class="w-full bg-[#0062ff] py-4 my-8 overflow-hidden marquee-wrapper -rotate-2 scale-105 shadow-xl z-20 relative">
+      <div class="marquee-content flex gap-8 text-white font-jakarta font-bold text-2xl tracking-widest uppercase">
+        <span>Web Development</span><span>•</span>
+        <span>Data Science</span><span>•</span>
+        <span>AI Enthusiast</span><span>•</span>
+        <span>UI/UX Design</span><span>•</span>
+        <span>Mobile Apps</span><span>•</span>
+        <span>Web Development</span><span>•</span>
+        <span>Data Science</span><span>•</span>
+        <span>AI Enthusiast</span><span>•</span>
+        <span>UI/UX Design</span><span>•</span>
+        <span>Mobile Apps</span><span>•</span>
+      </div>
+    </div>
+
+    <!-- Selected Works -->
+    <section id="selected-works" class="max-w-[1356px] mx-auto py-16 md:py-24 px-6 md:px-8">
+      <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 reveal gap-6 lg:gap-0">
+        <div>
+          <h2 class="text-[#004cca] font-semibold text-[36px] tracking-[1.4px]">
+            /SELECTED WORK
+          </h2>
+          <div class="flex flex-wrap gap-4 mt-6">
+            <button
+              class="bg-[#1a1c1c] text-white px-6 py-2 rounded-full font-semibold text-sm"
+            >
+              All
+            </button>
+            <button
+              class="bg-[#f3f3f3] text-[#424656] px-6 py-2 rounded-full font-medium text-sm hover:bg-slate-200"
+            >
+              Data & AI
+            </button>
+            <button
+              class="bg-[#f3f3f3] text-[#424656] px-6 py-2 rounded-full font-medium text-sm hover:bg-slate-200"
+            >
+              Web Dev
+            </button>
+            <button
+              class="bg-[#f3f3f3] text-[#424656] px-6 py-2 rounded-full font-medium text-sm hover:bg-slate-200"
+            >
+              Mobile
+            </button>
+          </div>
+        </div>
+        <a
+          href="#"
+          class="font-jakarta font-bold text-lg flex items-center gap-2 hover:underline"
+        >
+          View All
+          <svg
+            width="13"
+            height="13"
+            viewBox="0 0 13 13"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.5 11.5L11.5 1.5M11.5 1.5V10.25M11.5 1.5H2.75"
+              stroke="#1A1C1C"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 reveal" style="transition-delay: 200ms;">
+        <!-- Project 1 -->
+        <div
+          class="bg-white rounded-2xl shadow-lg shadow-black/5 overflow-hidden group hover:-translate-y-1 transition-transform flex flex-col"
+        >
+          <div
+            class="h-[215px] bg-slate-200 w-full overflow-hidden relative cursor-pointer"
+            onclick="openModal('modal1')"
+          >
+            <img
+              src="Assets/images/project/project-1/1-1.png"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div
+              class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+            >
+              <span
+                class="text-white font-bold tracking-wider uppercase text-sm border border-white px-4 py-2 rounded-full backdrop-blur-sm"
+                >Lihat Project</span
+              >
+            </div>
+          </div>
+          <div class="p-8 flex-1 flex flex-col">
+            <span
+              class="text-[#004cca] font-bold text-xs tracking-wider uppercase"
+              >HTML5 • CSS3 • Bootstrap</span
+            >
+            <h3
+              class="font-jakarta font-bold text-[24px] text-[#1a1c1c] mt-2 mb-3"
+            >
+              Website Laboratorium Informatika
+            </h3>
+            <p class="text-[#424656] text-base leading-relaxed mb-6">
+              Desain terpadu website untuk Laboratorium Informatika Universitas
+              Andalas.
+            </p>
+            <button
+              onclick="openModal('modal1')"
+              class="mt-auto bg-[#1a1c1c] text-white px-6 py-2 rounded-full font-semibold text-sm hover:bg-black transition-colors self-start shadow"
+            >
+              Lihat Project
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div
+          class="bg-white rounded-2xl shadow-lg shadow-black/5 overflow-hidden group hover:-translate-y-1 transition-transform flex flex-col"
+        >
+          <div
+            class="h-[215px] bg-slate-200 w-full overflow-hidden relative cursor-pointer"
+            onclick="openModal('modal2')"
+          >
+            <img
+              src="Assets/images/project/project-2/2-1.png"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div
+              class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+            >
+              <span
+                class="text-white font-bold tracking-wider uppercase text-sm border border-white px-4 py-2 rounded-full backdrop-blur-sm"
+                >Lihat Project</span
+              >
+            </div>
+          </div>
+          <div class="p-8 flex-1 flex flex-col">
+            <span
+              class="text-[#004cca] font-bold text-xs tracking-wider uppercase"
+              >Java Development</span
+            >
+            <h3
+              class="font-jakarta font-bold text-[24px] text-[#1a1c1c] mt-2 mb-3"
+            >
+              Aplikasi Laundry
+            </h3>
+            <p class="text-[#424656] text-base leading-relaxed mb-6">
+              Sistem manajemen operasional laundry komprehensif menggunakan
+              bahasa pemrograman Java.
+            </p>
+            <button
+              onclick="openModal('modal2')"
+              class="mt-auto bg-[#1a1c1c] text-white px-6 py-2 rounded-full font-semibold text-sm hover:bg-black transition-colors self-start shadow"
+            >
+              Lihat Project
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div
+          class="bg-white rounded-2xl shadow-lg shadow-black/5 overflow-hidden group hover:-translate-y-1 transition-transform flex flex-col"
+        >
+          <div
+            class="h-[215px] bg-slate-200 w-full overflow-hidden relative cursor-pointer"
+            onclick="openModal('modal3')"
+          >
+            <img
+              src="Assets/images/project/project-3/3-3.png"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div
+              class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+            >
+              <span
+                class="text-white font-bold tracking-wider uppercase text-sm border border-white px-4 py-2 rounded-full backdrop-blur-sm"
+                >Lihat Project</span
+              >
+            </div>
+          </div>
+          <div class="p-8 flex-1 flex flex-col">
+            <span
+              class="text-[#004cca] font-bold text-xs tracking-wider uppercase"
+              >Design Web • React</span
+            >
+            <h3
+              class="font-jakarta font-bold text-[24px] text-[#1a1c1c] mt-2 mb-3"
+            >
+              Weather App
+            </h3>
+            <p class="text-[#424656] text-base leading-relaxed mb-6">
+              Aplikasi pendeteksi cuaca interaktif berbasis web yang dibangun
+              dengan framework ReactJS.
+            </p>
+            <button
+              onclick="openModal('modal3')"
+              class="mt-auto bg-[#1a1c1c] text-white px-6 py-2 rounded-full font-semibold text-sm hover:bg-black transition-colors self-start shadow"
+            >
+              Lihat Project
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="bg-white rounded-2xl shadow-lg shadow-black/5 overflow-hidden group hover:-translate-y-1 transition-transform flex flex-col">
+          <div class="h-[215px] bg-slate-200 w-full overflow-hidden relative cursor-pointer" onclick="openModal('modal4')">
+            <img src="Assets/images/project/project-4/4-1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="text-white font-bold tracking-wider uppercase text-sm border border-white px-4 py-2 rounded-full backdrop-blur-sm">Lihat Project</span>
+            </div>
+          </div>
+          <div class="p-8 flex-1 flex flex-col">
+            <span class="text-[#004cca] font-bold text-xs tracking-wider uppercase">Mobile App</span>
+            <h3 class="font-jakarta font-bold text-[24px] text-[#1a1c1c] mt-2 mb-3">Money Track App</h3>
+            <p class="text-[#424656] text-base leading-relaxed mb-6">
+              Aplikasi mobile untuk melacak keuangan personal secara efisien.
+            </p>
+            <button onclick="openModal('modal4')" class="mt-auto bg-[#1a1c1c] text-white px-6 py-2 rounded-full font-semibold text-sm hover:bg-black transition-colors self-start shadow">Lihat Project</button>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="bg-white rounded-2xl shadow-lg shadow-black/5 overflow-hidden group hover:-translate-y-1 transition-transform flex flex-col">
+          <div class="h-[215px] bg-slate-200 w-full overflow-hidden relative cursor-pointer" onclick="openModal('modal5')">
+            <img src="Assets/images/project/project-5/5-1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="text-white font-bold tracking-wider uppercase text-sm border border-white px-4 py-2 rounded-full backdrop-blur-sm">Lihat Project</span>
+            </div>
+          </div>
+          <div class="p-8 flex-1 flex flex-col">
+            <span class="text-[#004cca] font-bold text-xs tracking-wider uppercase">Big Data</span>
+            <h3 class="font-jakarta font-bold text-[24px] text-[#1a1c1c] mt-2 mb-3">Sistem Prediksi Udara</h3>
+            <p class="text-[#424656] text-base leading-relaxed mb-6">
+              Sistem prediksi kualitas udara memanfaatkan permodelan Big Data.
+            </p>
+            <button onclick="openModal('modal5')" class="mt-auto bg-[#1a1c1c] text-white px-6 py-2 rounded-full font-semibold text-sm hover:bg-black transition-colors self-start shadow">Lihat Project</button>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="bg-white rounded-2xl shadow-lg shadow-black/5 overflow-hidden group hover:-translate-y-1 transition-transform flex flex-col">
+          <div class="h-[215px] bg-slate-200 w-full overflow-hidden relative cursor-pointer" onclick="openModal('modal6')">
+            <img src="Assets/images/project/project-6/6-1.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Choropleth Map Sumbar" />
+            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="text-white font-bold tracking-wider uppercase text-sm border border-white px-4 py-2 rounded-full backdrop-blur-sm">Lihat Project</span>
+            </div>
+          </div>
+          <div class="p-8 flex-1 flex flex-col">
+            <span class="text-[#004cca] font-bold text-xs tracking-wider uppercase">Data Viz</span>
+            <h3 class="font-jakarta font-bold text-[24px] text-[#1a1c1c] mt-2 mb-3">Choropleth Map Sumbar</h3>
+            <p class="text-[#424656] text-base leading-relaxed mb-6">
+              Visualisasi data spasio-temporal interaktif peta Sumatera Barat.
+            </p>
+            <button onclick="openModal('modal6')" class="mt-auto bg-[#1a1c1c] text-white px-6 py-2 rounded-full font-semibold text-sm hover:bg-black transition-colors self-start shadow">Lihat Project</button>
+          </div>
+        </div>
+
+        <!-- Project 7 -->
+        <div class="bg-white rounded-2xl shadow-lg shadow-black/5 overflow-hidden group hover:-translate-y-1 transition-transform flex flex-col">
+          <div class="h-[215px] bg-slate-200 w-full overflow-hidden relative cursor-pointer" onclick="openModal('modal7')">
+            <img src="Assets/images/project/project-7/7-1.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Financial & Equity Dashboard" />
+            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="text-white font-bold tracking-wider uppercase text-sm border border-white px-4 py-2 rounded-full backdrop-blur-sm">Lihat Project</span>
+            </div>
+          </div>
+          <div class="p-8 flex-1 flex flex-col">
+            <span class="text-[#004cca] font-bold text-xs tracking-wider uppercase">Data Viz</span>
+            <h3 class="font-jakarta font-bold text-[24px] text-[#1a1c1c] mt-2 mb-3">Financial Dashboard</h3>
+            <p class="text-[#424656] text-base leading-relaxed mb-6">
+              Visualisasi Data Spasio Temporal untuk sektor finansial dan ekuitas.
+            </p>
+            <button onclick="openModal('modal7')" class="mt-auto bg-[#1a1c1c] text-white px-6 py-2 rounded-full font-semibold text-sm hover:bg-black transition-colors self-start shadow">Lihat Project</button>
+          </div>
+        </div>
+
+        <!-- Project 8 -->
+        <div class="bg-white rounded-2xl shadow-lg shadow-black/5 overflow-hidden group hover:-translate-y-1 transition-transform flex flex-col">
+          <div class="h-[215px] bg-slate-200 w-full overflow-hidden relative cursor-pointer" onclick="openModal('modal8')">
+            <img src="Assets/images/project/project-8/8-1.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="PhotoBox Web" />
+            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="text-white font-bold tracking-wider uppercase text-sm border border-white px-4 py-2 rounded-full backdrop-blur-sm">Lihat Project</span>
+            </div>
+          </div>
+          <div class="p-8 flex-1 flex flex-col">
+            <span class="text-[#004cca] font-bold text-xs tracking-wider uppercase">Design Web</span>
+            <h3 class="font-jakarta font-bold text-[24px] text-[#1a1c1c] mt-2 mb-3">PhotoBox Web</h3>
+            <p class="text-[#424656] text-base leading-relaxed mb-6">
+              Desain modern interaktif untuk website antarmuka PhotoBox.
+            </p>
+            <button onclick="openModal('modal8')" class="mt-auto bg-[#1a1c1c] text-white px-6 py-2 rounded-full font-semibold text-sm hover:bg-black transition-colors self-start shadow">Lihat Project</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Core Competencies -->
+    <section id="core-competencies" class="max-w-[1356px] mx-auto py-16 md:py-24 px-6 md:px-8">
+      <h2
+        class="text-[#004cca] font-semibold text-[36px] tracking-[1.4px] mb-12 uppercase reveal"
+      >
+        /CORE COMPETENCIES
+      </h2>
+
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 reveal" style="transition-delay: 200ms;">
+        <!-- Web Dev (Dark Card) -->
+        <div
+          class="lg:col-span-2 lg:row-span-2 bg-[#1a1a1a] rounded-[32px] md:rounded-[48px] p-8 md:p-12 flex flex-col justify-between min-h-[420px]"
+        >
+          <div class="flex justify-between items-start">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 18L22 12L16 6M8 6L2 12L8 18M14 4L10 20" stroke="#F9F9F9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span
+              class="font-jakarta font-extrabold italic text-[60px] text-[#f9f9f9]/30 leading-none"
+              >01</span
+            >
+          </div>
+          <div>
+            <h3 class="font-jakarta font-bold text-[36px] text-[#f9f9f9] mb-6">
+              Web Dev
+            </h3>
+            <p
+              class="font-normal text-[18px] text-[#f9f9f9]/70 leading-[29.25px]"
+            >
+              Building scalable architecture using Next.js, Node.js,<br
+                class="hidden md:block"
+              />
+              and modern CSS frameworks with a focus on<br
+                class="hidden md:block"
+              />
+              performance and accessibility.
+            </p>
+          </div>
+        </div>
+
+        <!-- Data & AI -->
+        <div
+          class="lg:col-span-2 lg:row-span-1 bg-white rounded-[32px] md:rounded-[48px] p-6 md:p-10 shadow-sm shadow-black/5 flex flex-col justify-center min-h-[198px]"
+        >
+          <div class="flex justify-between items-start mb-4">
+            <h3 class="font-jakarta font-bold text-[24px] text-[#1a1c1c]">
+              Data & AI
+            </h3>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 16V8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18H19C20.1046 18 21 17.1046 21 16Z" stroke="#004cca" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M3 10H21" stroke="#004cca" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M7 14H9" stroke="#004cca" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <p class="font-normal text-[16px] text-[#424656] leading-[24px]">
+            Machine Learning, Predictive Models, and Big Data Analysis.
+          </p>
+        </div>
+
+        <!-- Mobile Apps -->
+        <div
+          class="lg:col-span-1 lg:row-span-1 bg-white rounded-[32px] md:rounded-[48px] p-6 md:p-10 shadow-sm shadow-black/5 flex flex-col justify-between min-h-[198px]"
+        >
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="2" width="12" height="20" rx="3" stroke="#004cca" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M11 18H13" stroke="#004cca" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <h3 class="font-jakarta font-bold text-[20px] text-[#1a1c1c] mt-8">
+            Mobile Apps
+          </h3>
+        </div>
+
+        <!-- UI/UX Design -->
+        <div
+          class="lg:col-span-1 lg:row-span-1 bg-white rounded-[32px] md:rounded-[48px] p-6 md:p-10 shadow-sm shadow-black/5 flex flex-col justify-between min-h-[198px]"
+        >
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 20.5C12 20.5 4 16 4 10.5V5L12 2L20 5V10.5C20 16 12 20.5 12 20.5Z" stroke="#004cca" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 14.5L15 11.5L9 8" stroke="#004cca" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3 class="font-jakarta font-bold text-[20px] text-[#1a1c1c] mt-8">
+            UI/UX Design
+          </h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="bg-[#1a1a1a] w-full">
+      <div class="max-w-[1356px] mx-auto py-24 px-8">
+        <h2
+          class="text-[#004cca] font-semibold text-[36px] tracking-[1.4px] mb-12 uppercase reveal"
+        >
+          /EXPERIENCE
+        </h2>
+
+        <div class="flex flex-col gap-4 reveal" style="transition-delay: 200ms;">
+          <!-- Timeline Item 1 -->
+          <div
+            class="border border-white/20 rounded-[32px] py-12 px-6 md:px-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 hover:bg-white/5 transition-colors"
+          >
+            <div>
+              <h3
+                class="font-jakarta font-bold text-[32px] md:text-[48px] text-white leading-tight"
+              >
+                Universitas Andalas
+              </h3>
+              <p class="font-normal text-[18px] text-white/50 mt-2">
+                Informatics Student & Research Assistant
+              </p>
+            </div>
+            <div class="border border-white/20 rounded-full px-6 py-2 shrink-0">
+              <span
+                class="font-bold text-[14px] text-white tracking-[1.4px] uppercase"
+                >Present</span
+              >
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div
+            class="border border-white/20 rounded-[32px] py-12 px-6 md:px-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 hover:bg-white/5 transition-colors"
+          >
+            <div>
+              <h3
+                class="font-jakarta font-bold text-[32px] md:text-[48px] text-white leading-tight"
+              >
+                KKN Nagari Lubuk Gadang
+              </h3>
+              <p class="font-normal text-[18px] text-white/50 mt-2">
+                Community Service - IT Division
+              </p>
+            </div>
+            <div class="border border-white/20 rounded-full px-6 py-2 shrink-0">
+              <span
+                class="font-bold text-[14px] text-white tracking-[1.4px] uppercase"
+                >Jan - Feb 2026</span
+              >
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div
+            class="border border-white/20 rounded-[32px] py-12 px-6 md:px-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 hover:bg-white/5 transition-colors"
+          >
+            <div>
+              <h3
+                class="font-jakarta font-bold text-[32px] md:text-[48px] text-white leading-tight"
+              >
+                Capstone Project (UCW App)
+              </h3>
+              <p class="font-normal text-[18px] text-white/50 mt-2">
+                POS - UI / UX Designers
+              </p>
+            </div>
+            <div class="border border-white/20 rounded-full px-6 py-2 shrink-0">
+              <span
+                class="font-bold text-[14px] text-white tracking-[1.4px] uppercase"
+                >Feb - Present 2026</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="bg-[#f2f2f2] w-full mt-auto pt-32 pb-8 flex flex-col items-center justify-center text-center px-8 relative overflow-hidden"
+    >
+      <!-- Top Status Pill -->
+      <div
+        class="flex items-center gap-3 border border-gray-300 rounded-full px-5 py-2 mb-10 bg-white/50 backdrop-blur-sm z-10"
+      >
+        <span class="relative flex h-3 w-3">
+          <span
+            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#10b981] opacity-75"
+          ></span>
+          <span
+            class="relative inline-flex rounded-full h-3 w-3 bg-[#10b981]"
+          ></span>
+        </span>
+        <span
+          class="font-medium text-[14px] text-[#424656] uppercase tracking-wider"
+          >Available for Internship</span
+        >
+      </div>
+
+      <!-- Middle Element Core -->
+      <h2
+        class="font-jakarta font-extrabold text-[#1a1c1c] text-6xl md:text-8xl leading-none uppercase tracking-tighter mb-12 max-w-[1356px] z-10"
+      >
+        HAVE A PROJECT IN MIND?
+      </h2>
+
+      <!-- Call to action -->
+      <a
+        href="mailto:rifkiyuliandra875@gmail.com"
+        class="bg-[#0d0d0d] text-white rounded-full px-10 py-4 font-bold text-lg hover:bg-black transition-all hover:scale-105 active:scale-95 shadow-xl shadow-black/10 mb-20 z-10"
+      >
+        Contact Me
+      </a>
+
+      <!-- Bottom Row -->
+      <div
+        class="max-w-[1356px] w-full mx-auto flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-gray-300/50 mt-auto z-10"
+      >
+        <div class="font-medium text-[14px] text-[#424656]">
+          &copy; 2026 Rifki Yuliandra
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-3">
+          <a
+            href="https://www.linkedin.com/in/rifki-yuliandra-957774287/"
+            target="_blank"
+            class="border border-slate-300 rounded-full px-5 py-2 text-[14px] font-medium text-[#1a1c1c] hover:bg-slate-200 transition-colors flex items-center gap-2"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+              />
+            </svg>
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/Alone1011"
+            target="_blank"
+            class="border border-slate-300 rounded-full px-5 py-2 text-[14px] font-medium text-[#1a1c1c] hover:bg-slate-200 transition-colors flex items-center gap-2"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+              />
+            </svg>
+            GitHub
+          </a>
+          <a
+            href="https://www.instagram.com/r_kiylndr_/"
+            target="_blank"
+            class="border border-slate-300 rounded-full px-5 py-2 text-[14px] font-medium text-[#1a1c1c] hover:bg-slate-200 transition-colors flex items-center gap-2"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+              />
+            </svg>
+            Instagram
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Project Modals Container -->
+    <div
+      id="modal-backdrop"
+      class="fixed inset-0 bg-[#0f172a]/80 backdrop-blur-md z-[100] hidden flex items-center justify-center p-4"
+    >
+      <!-- Modal 1 -->
+      <div
+        id="modal1"
+        class="relative bg-white w-full max-w-4xl rounded-[32px] overflow-hidden shadow-2xl hidden transform scale-95 transition-transform duration-300"
+      >
+        <div
+          class="p-6 md:p-8 border-b border-slate-100 flex justify-between items-center"
+        >
+          <h3
+            class="font-jakarta font-bold text-[20px] md:text-[24px] text-[#1a1c1c]"
+          >
+            Website Laboratorium Informatika
+          </h3>
+          <button
+            onclick="closeModal()"
+            class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center hover:bg-slate-200 transition-colors text-slate-500 shrink-0"
+          >
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 1L13 13M1 13L13 1"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="p-6 md:p-8 flex-1 overflow-y-auto">
+          <div
+            class="relative w-full aspect-video bg-slate-100 rounded-2xl overflow-hidden group"
+          >
+            <img
+              id="carousel1-img"
+              src="Assets/images/project/project-1/1-1.png"
+              class="w-full h-full object-contain"
+            />
+            <!-- Controls -->
+            <button
+              onclick="prevSlide(1)"
+              class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow-md hover:bg-white transition-colors opacity-0 group-hover:opacity-100"
+            >
+              <svg
+                width="8"
+                height="12"
+                viewBox="0 0 8 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 10L2 6L6 2"
+                  stroke="#1A1C1C"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <button
+              onclick="nextSlide(1)"
+              class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow-md hover:bg-white transition-colors opacity-0 group-hover:opacity-100"
+            >
+              <svg
+                width="8"
+                height="12"
+                viewBox="0 0 8 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2 2L6 6L2 10"
+                  stroke="#1A1C1C"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <!-- Indicators -->
+            <div
+              class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2"
+              id="carousel1-indicators"
+            >
+              <div
+                class="w-2 h-2 rounded-full bg-white transition-all shadow indicator active"
+              ></div>
+              <div
+                class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"
+              ></div>
+              <div
+                class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"
+              ></div>
+              <div
+                class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"
+              ></div>
+            </div>
+          </div>
+          <div
+            class="mt-8 flex flex-col md:flex-row justify-between md:items-center bg-[#f8fafc] p-6 rounded-2xl gap-4"
+          >
+            <div>
+              <span
+                class="block text-sm font-bold text-slate-400 uppercase tracking-widest mb-1"
+                >Repository</span
+              >
+              <a
+                href="https://github.com/Alone1011/DesainWeb_RifkiYuliandra_2311532011/tree/main/TugasDweb/WebsiteLabor"
+                target="_blank"
+                class="font-medium text-[#0062ff] hover:underline underline-offset-4 overflow-hidden text-ellipsis whitespace-nowrap block max-w-[280px] md:max-w-md"
+                >github.com/Alone1011/DesainWeb_Rifki...</a
+              >
+            </div>
+            <a
+              href="https://github.com/Alone1011/DesainWeb_RifkiYuliandra_2311532011/tree/main/TugasDweb/WebsiteLabor"
+              target="_blank"
+              class="bg-[#1a1c1c] text-center text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-black transition-colors shrink-0"
+              >View Code</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 2 -->
+      <div
+        id="modal2"
+        class="relative bg-white w-full max-w-4xl rounded-[32px] overflow-hidden shadow-2xl hidden transform scale-95 transition-transform duration-300"
+      >
+        <div
+          class="p-6 md:p-8 border-b border-slate-100 flex justify-between items-center"
+        >
+          <h3
+            class="font-jakarta font-bold text-[20px] md:text-[24px] text-[#1a1c1c]"
+          >
+            Aplikasi Laundry
+          </h3>
+          <button
+            onclick="closeModal()"
+            class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center hover:bg-slate-200 transition-colors text-slate-500 shrink-0"
+          >
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 1L13 13M1 13L13 1"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="p-6 md:p-8 flex-1 overflow-y-auto">
+          <div
+            class="relative w-full aspect-video bg-slate-100 rounded-2xl overflow-hidden group"
+          >
+            <img
+              id="carousel2-img"
+              src="Assets/images/project/project-2/2-1.png"
+              class="w-full h-full object-contain"
+            />
+            <!-- Controls -->
+            <button
+              onclick="prevSlide(2)"
+              class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow-md hover:bg-white transition-colors opacity-0 group-hover:opacity-100"
+            >
+              <svg
+                width="8"
+                height="12"
+                viewBox="0 0 8 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 10L2 6L6 2"
+                  stroke="#1A1C1C"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <button
+              onclick="nextSlide(2)"
+              class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow-md hover:bg-white transition-colors opacity-0 group-hover:opacity-100"
+            >
+              <svg
+                width="8"
+                height="12"
+                viewBox="0 0 8 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2 2L6 6L2 10"
+                  stroke="#1A1C1C"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <!-- Indicators -->
+            <div
+              class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2"
+              id="carousel2-indicators"
+            >
+              <div
+                class="w-2 h-2 rounded-full bg-white transition-all shadow indicator active"
+              ></div>
+              <div
+                class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"
+              ></div>
+              <div
+                class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"
+              ></div>
+            </div>
+          </div>
+          <div
+            class="mt-8 flex flex-col md:flex-row justify-between md:items-center bg-[#f8fafc] p-6 rounded-2xl gap-4"
+          >
+            <div>
+              <span
+                class="block text-sm font-bold text-slate-400 uppercase tracking-widest mb-1"
+                >Repository</span
+              >
+              <a
+                href="https://github.com/Alone1011/PBO-2311532011-RifkiYuliandra-A/tree/master"
+                target="_blank"
+                class="font-medium text-[#0062ff] hover:underline underline-offset-4 overflow-hidden text-ellipsis whitespace-nowrap block max-w-[280px] md:max-w-md"
+                >github.com/Alone1011/PBO-2311532...</a
+              >
+            </div>
+            <a
+              href="https://github.com/Alone1011/PBO-2311532011-RifkiYuliandra-A/tree/master"
+              target="_blank"
+              class="bg-[#1a1c1c] text-center text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-black transition-colors shrink-0"
+              >View Code</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 3 -->
+      <div
+        id="modal3"
+        class="relative bg-white w-full max-w-4xl rounded-[32px] overflow-hidden shadow-2xl hidden transform scale-95 transition-transform duration-300"
+      >
+        <div
+          class="p-6 md:p-8 border-b border-slate-100 flex justify-between items-center"
+        >
+          <h3
+            class="font-jakarta font-bold text-[20px] md:text-[24px] text-[#1a1c1c]"
+          >
+            Weather App
+          </h3>
+          <button
+            onclick="closeModal()"
+            class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center hover:bg-slate-200 transition-colors text-slate-500 shrink-0"
+          >
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 1L13 13M1 13L13 1"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="p-6 md:p-8 flex-1 overflow-y-auto">
+          <div
+            class="relative w-full aspect-video bg-slate-100 rounded-2xl overflow-hidden group"
+          >
+            <img
+              id="carousel3-img"
+              src="Assets/images/project/project-3/3-1.png"
+              class="w-full h-full object-contain"
+            />
+            <!-- Controls -->
+            <button
+              onclick="prevSlide(3)"
+              class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow-md hover:bg-white transition-colors opacity-0 group-hover:opacity-100"
+            >
+              <svg
+                width="8"
+                height="12"
+                viewBox="0 0 8 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 10L2 6L6 2"
+                  stroke="#1A1C1C"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <button
+              onclick="nextSlide(3)"
+              class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow-md hover:bg-white transition-colors opacity-0 group-hover:opacity-100"
+            >
+              <svg
+                width="8"
+                height="12"
+                viewBox="0 0 8 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2 2L6 6L2 10"
+                  stroke="#1A1C1C"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <!-- Indicators -->
+            <div
+              class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2"
+              id="carousel3-indicators"
+            >
+              <div
+                class="w-2 h-2 rounded-full bg-white transition-all shadow indicator active"
+              ></div>
+              <div
+                class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"
+              ></div>
+              <div
+                class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"
+              ></div>
+              <div
+                class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"
+              ></div>
+            </div>
+          </div>
+          <div
+            class="mt-8 flex flex-col md:flex-row justify-between md:items-center bg-[#f8fafc] p-6 rounded-2xl gap-4"
+          >
+            <div>
+              <span
+                class="block text-sm font-bold text-slate-400 uppercase tracking-widest mb-1"
+                >Repository</span
+              >
+              <a
+                href="https://github.com/Alone1011/submission-MIFE/tree/main/submission-week2-weather-app"
+                target="_blank"
+                class="font-medium text-[#0062ff] hover:underline underline-offset-4 overflow-hidden text-ellipsis whitespace-nowrap block max-w-[280px] md:max-w-md"
+                >github.com/Alone1011/submissio...</a
+              >
+            </div>
+            <a
+              href="https://github.com/Alone1011/submission-MIFE/tree/main/submission-week2-weather-app"
+              target="_blank"
+              class="bg-[#1a1c1c] text-center text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-black transition-colors shrink-0"
+              >View Code</a
+            >
+          </div>
+        </div>
+      </div>
+
+        <!-- Modal 4 -->
+        <div id="modal4" class="relative bg-white w-full max-w-4xl rounded-[32px] overflow-hidden shadow-2xl hidden transform scale-95 transition-transform duration-300">
+            <div class="p-6 md:p-8 border-b border-slate-100 flex justify-between items-center">
+                <h3 class="font-jakarta font-bold text-[20px] md:text-[24px] text-[#1a1c1c]">Money Track App</h3>
+                <button onclick="closeModal()" class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center hover:bg-slate-200 transition-colors text-slate-500 shrink-0">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L13 13M1 13L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </button>
+            </div>
+            <div class="p-6 md:p-8 flex-1 overflow-y-auto">
+                <div class="relative w-full aspect-video bg-slate-100 rounded-2xl overflow-hidden group">
+                    <img id="carousel4-img" src="Assets/images/project/project-4/4-1.jpeg" class="w-full h-full object-contain" />
+                    <!-- Controls -->
+                    <button onclick="prevSlide(4)" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow-md hover:bg-white transition-colors opacity-0 group-hover:opacity-100">
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 10L2 6L6 2" stroke="#1A1C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <button onclick="nextSlide(4)" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow-md hover:bg-white transition-colors opacity-0 group-hover:opacity-100">
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L6 6L2 10" stroke="#1A1C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <!-- Indicators -->
+                    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2" id="carousel4-indicators">
+                        <div class="w-2 h-2 rounded-full bg-white transition-all shadow indicator active"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"></div>
+                    </div>
+                </div>
+                <div class="mt-8 flex flex-col md:flex-row justify-between md:items-center bg-[#f8fafc] p-6 rounded-2xl gap-4">
+                    <div>
+                        <span class="block text-sm font-bold text-slate-400 uppercase tracking-widest mb-1">Repository</span>
+                        <a href="https://github.com/Alone1011/2311532011-RifkiY-MobileApp" target="_blank" class="font-medium text-[#0062ff] hover:underline underline-offset-4 overflow-hidden text-ellipsis whitespace-nowrap block max-w-[280px] md:max-w-md">github.com/Alone1011/23...</a>
+                    </div>
+                    <a href="https://github.com/Alone1011/2311532011-RifkiY-MobileApp" target="_blank" class="bg-[#1a1c1c] text-center text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-black transition-colors shrink-0">View Code</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 5 -->
+        <div id="modal5" class="relative bg-white w-full max-w-4xl rounded-[32px] overflow-hidden shadow-2xl hidden transform scale-95 transition-transform duration-300">
+            <div class="p-6 md:p-8 border-b border-slate-100 flex justify-between items-center">
+                <h3 class="font-jakarta font-bold text-[20px] md:text-[24px] text-[#1a1c1c]">Sistem Prediksi Kualitas Udara</h3>
+                <button onclick="closeModal()" class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center hover:bg-slate-200 transition-colors text-slate-500 shrink-0">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L13 13M1 13L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </button>
+            </div>
+            <div class="p-6 md:p-8 flex-1 overflow-y-auto">
+                <div class="relative w-full aspect-video bg-slate-100 rounded-2xl overflow-hidden group">
+                    <img id="carousel5-img" src="Assets/images/project/project-5/5-1.jpeg" class="w-full h-full object-contain" />
+                    <!-- Controls -->
+                    <button onclick="prevSlide(5)" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow-md hover:bg-white transition-colors opacity-0 group-hover:opacity-100">
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 10L2 6L6 2" stroke="#1A1C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <button onclick="nextSlide(5)" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow-md hover:bg-white transition-colors opacity-0 group-hover:opacity-100">
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L6 6L2 10" stroke="#1A1C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <!-- Indicators -->
+                    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-wrap gap-2 justify-center max-w-[80%]" id="carousel5-indicators">
+                        <div class="w-2 h-2 rounded-full bg-white transition-all shadow indicator active"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"></div>
+                    </div>
+                </div>
+                <div class="mt-8 flex flex-col md:flex-row justify-between md:items-center bg-[#f8fafc] p-6 rounded-2xl gap-4">
+                    <div>
+                        <span class="block text-sm font-bold text-slate-400 uppercase tracking-widest mb-1">Repository</span>
+                        <a href="https://github.com/Alone1011/2311532011-RifkiY-BigData" target="_blank" class="font-medium text-[#0062ff] hover:underline underline-offset-4 overflow-hidden text-ellipsis whitespace-nowrap block max-w-[280px] md:max-w-md">github.com/Alone1011/23...</a>
+                    </div>
+                    <a href="https://github.com/Alone1011/2311532011-RifkiY-BigData" target="_blank" class="bg-[#1a1c1c] text-center text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-black transition-colors shrink-0">View Code</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 6 -->
+        <div id="modal6" class="relative bg-white w-full max-w-4xl rounded-[32px] overflow-hidden shadow-2xl hidden transform scale-95 transition-transform duration-300">
+            <div class="p-6 md:p-8 border-b border-slate-100 flex justify-between items-center">
+                <h3 class="font-jakarta font-bold text-[20px] md:text-[24px] text-[#1a1c1c]">Interactive Choropleth Map</h3>
+                <button onclick="closeModal()" class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center hover:bg-slate-200 transition-colors text-slate-500 shrink-0">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L13 13M1 13L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </button>
+            </div>
+            <div class="p-6 md:p-8 flex-1 overflow-y-auto">
+                <div class="relative w-full aspect-video bg-slate-100 rounded-2xl overflow-hidden group">
+                    <img id="carousel6-img" src="Assets/images/project/project-6/6-1.png" class="w-full h-full object-contain" />
+                    <!-- Controls -->
+                    <button onclick="prevSlide(6)" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow-md hover:bg-white transition-colors opacity-0 group-hover:opacity-100">
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 10L2 6L6 2" stroke="#1A1C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <button onclick="nextSlide(6)" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow-md hover:bg-white transition-colors opacity-0 group-hover:opacity-100">
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L6 6L2 10" stroke="#1A1C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <!-- Indicators -->
+                    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2" id="carousel6-indicators">
+                        <div class="w-2 h-2 rounded-full bg-white transition-all shadow indicator active"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"></div>
+                    </div>
+                </div>
+                <div class="mt-8 flex flex-col md:flex-row justify-between md:items-center bg-[#f8fafc] p-6 rounded-2xl gap-4">
+                    <div>
+                        <span class="block text-sm font-bold text-slate-400 uppercase tracking-widest mb-1">Repository</span>
+                        <a href="https://github.com/Alone1011/VDST-2311532011-RifkiYuliandra-Choropleth-Maps-6.git" target="_blank" class="font-medium text-[#0062ff] hover:underline underline-offset-4 overflow-hidden text-ellipsis whitespace-nowrap block max-w-[280px] md:max-w-md">github.com/Alone1011/VDST-2311...</a>
+                    </div>
+                    <a href="https://github.com/Alone1011/VDST-2311532011-RifkiYuliandra-Choropleth-Maps-6.git" target="_blank" class="bg-[#1a1c1c] text-center text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-black transition-colors shrink-0">View Code</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 7 -->
+        <div id="modal7" class="relative bg-white w-full max-w-4xl rounded-[32px] overflow-hidden shadow-2xl hidden transform scale-95 transition-transform duration-300">
+            <div class="p-6 md:p-8 border-b border-slate-100 flex justify-between items-center">
+                <h3 class="font-jakarta font-bold text-[20px] md:text-[24px] text-[#1a1c1c]">Financial & Equity Dashboard</h3>
+                <button onclick="closeModal()" class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center hover:bg-slate-200 transition-colors text-slate-500 shrink-0">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L13 13M1 13L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </button>
+            </div>
+            <div class="p-6 md:p-8 flex-1 overflow-y-auto">
+                <div class="relative w-full aspect-video bg-slate-100 rounded-2xl overflow-hidden group">
+                    <img id="carousel7-img" src="Assets/images/project/project-7/7-1.png" class="w-full h-full object-contain" />
+                    <!-- Controls -->
+                    <button onclick="prevSlide(7)" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow-md hover:bg-white transition-colors opacity-0 group-hover:opacity-100">
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 10L2 6L6 2" stroke="#1A1C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <button onclick="nextSlide(7)" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow-md hover:bg-white transition-colors opacity-0 group-hover:opacity-100">
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L6 6L2 10" stroke="#1A1C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <!-- Indicators -->
+                    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2" id="carousel7-indicators">
+                        <div class="w-2 h-2 rounded-full bg-white transition-all shadow indicator active"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"></div>
+                    </div>
+                </div>
+                <div class="mt-8 flex flex-col md:flex-row justify-between md:items-center bg-[#f8fafc] p-6 rounded-2xl gap-4">
+                    <div>
+                        <span class="block text-sm font-bold text-slate-400 uppercase tracking-widest mb-1">Repository</span>
+                        <a href="https://github.com/Alone1011/VDST-KLP4-Financial-Dashboard.git" target="_blank" class="font-medium text-[#0062ff] hover:underline underline-offset-4 overflow-hidden text-ellipsis whitespace-nowrap block max-w-[280px] md:max-w-md">github.com/Alone1011/VDST-KLP4...</a>
+                    </div>
+                    <a href="https://github.com/Alone1011/VDST-KLP4-Financial-Dashboard.git" target="_blank" class="bg-[#1a1c1c] text-center text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-black transition-colors shrink-0">View Code</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 8 -->
+        <div id="modal8" class="relative bg-white w-full max-w-4xl rounded-[32px] overflow-hidden shadow-2xl hidden transform scale-95 transition-transform duration-300">
+            <div class="p-6 md:p-8 border-b border-slate-100 flex justify-between items-center">
+                <h3 class="font-jakarta font-bold text-[20px] md:text-[24px] text-[#1a1c1c]">PhotoBox Web</h3>
+                <button onclick="closeModal()" class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center hover:bg-slate-200 transition-colors text-slate-500 shrink-0">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L13 13M1 13L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </button>
+            </div>
+            <div class="p-6 md:p-8 flex-1 overflow-y-auto">
+                <div class="relative w-full aspect-video bg-slate-100 rounded-2xl overflow-hidden group">
+                    <img id="carousel8-img" src="Assets/images/project/project-8/8-1.png" class="w-full h-full object-contain" />
+                    <!-- Controls -->
+                    <button onclick="prevSlide(8)" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow-md hover:bg-white transition-colors opacity-0 group-hover:opacity-100">
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 10L2 6L6 2" stroke="#1A1C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <button onclick="nextSlide(8)" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow-md hover:bg-white transition-colors opacity-0 group-hover:opacity-100">
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L6 6L2 10" stroke="#1A1C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <!-- Indicators -->
+                    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2" id="carousel8-indicators">
+                        <div class="w-2 h-2 rounded-full bg-white transition-all shadow indicator active"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50 transition-all shadow indicator"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Modal and Animation Scripts -->
+    <!-- GSAP & Lenis CDNs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script>
+      // 1. Initialize Lenis Smooth Scrolling
+      const lenis = new Lenis({
+        lerp: 0.08, 
+        smoothWheel: true,
+      });
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+
+      // --- Loading Screen Animation ---
+      const tlLoader = gsap.timeline();
+      
+      // Prevent scrolling during load
+      document.body.style.overflow = "hidden";
+
+      let counter = { value: 0 };
+      tlLoader.to(counter, {
+        value: 100,
+        duration: 2.5,
+        ease: "power2.inOut",
+        onUpdate: () => {
+          document.getElementById("loader-progress").style.width = Math.round(counter.value) + "%";
+        }
+      })
+      .to("#loader", {
+        yPercent: -100,
+        duration: 0.8,
+        ease: "power4.inOut",
+        onComplete: () => {
+          document.body.style.overflow = "";
+        }
+      })
+      // --- Hero Stagger Animation ---
+      .from(".profile-wrapper", {
+        y: 60,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power4.out"
+      }, "-=0.3")
+      .from(".hero-line", {
+        yPercent: 100,
+        opacity: 0,
+        stagger: 0.15,
+        duration: 1,
+        ease: "power4.out"
+      }, "-=0.8")
+      .from(".hero-stagger", {
+        y: 20,
+        opacity: 0,
+        stagger: 0.1,
+        duration: 0.8,
+        ease: "power3.out"
+      }, "-=0.8");
+
+      // --- Marquee Animations ---
+      // Hero Marquee
+      gsap.to("#hero-marquee .marquee-content", {
+        xPercent: -50,
+        ease: "none",
+        duration: 25,
+        repeat: -1
+      });
+      
+      // Strip Marquee
+      gsap.utils.toArray(".marquee-wrapper:not(#hero-marquee) .marquee-content").forEach(marquee => {
+        gsap.to(marquee, {
+          xPercent: -50,
+          ease: "none",
+          duration: 15,
+          repeat: -1
+        });
+      });
+
+      // --- IntersectionObserver Reveal (Replaces ScrollTrigger) ---
+      const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          } else {
+            // Remove active class to trigger fade-out when scrolled out of view
+            entry.target.classList.remove("active");
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      document.querySelectorAll(".reveal").forEach((el) => {
+        scrollObserver.observe(el);
+      });
+
+      // Mobile Menu Logic
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+      let isMobileMenuOpen = false;
+
+      function toggleMobileMenu() {
+        isMobileMenuOpen = !isMobileMenuOpen;
+        const spans = mobileMenuBtn.querySelectorAll('span');
+        
+        if (isMobileMenuOpen) {
+          mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+          mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
+          
+          spans[0].style.transform = 'translateY(7px) rotate(45deg)';
+          spans[1].style.opacity = '0';
+          spans[2].style.transform = 'translateY(-7px) rotate(-45deg)';
+          
+          document.body.style.overflow = 'hidden';
+        } else {
+          mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+          mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+          
+          spans[0].style.transform = 'none';
+          spans[1].style.opacity = '1';
+          spans[2].style.transform = 'none';
+          
+          document.body.style.overflow = '';
+        }
+      }
+
+      mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+      
+      mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if(isMobileMenuOpen) toggleMobileMenu();
+        });
+      });
+
+      // Navbar Scroll Logic & Active State Tracker
+      const mainNav = document.getElementById('main-nav');
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-link');
+
+      window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+
+        // Navbar Style Toggle
+        if (scrollY > 50) {
+          mainNav.classList.remove('bg-transparent');
+          mainNav.classList.add('bg-white/80', 'backdrop-blur-3xl', 'shadow-sm');
+        } else {
+          mainNav.classList.remove('bg-white/80', 'backdrop-blur-3xl', 'shadow-sm');
+          mainNav.classList.add('bg-transparent');
+        }
+
+        // Active State Tracker
+        let current = '';
+        sections.forEach(section => {
+          const sectionHeight = section.offsetHeight;
+          const sectionTop = section.offsetTop - 300; // offset padding for header
+          if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('nav-active');
+          if (link.getAttribute('data-section') === current) {
+            link.classList.add('nav-active');
+          }
+        });
+      });
+
+      const projectImages = {
+        1: [
+          "Assets/images/project/project-1/1-1.png",
+          "Assets/images/project/project-1/1-2.png",
+          "Assets/images/project/project-1/1-3.png",
+          "Assets/images/project/project-1/1-4.png",
+        ],
+        2: [
+          "Assets/images/project/project-2/2-1.png",
+          "Assets/images/project/project-2/2-2.png",
+          "Assets/images/project/project-2/2-3.png",
+        ],
+        3: [
+          "Assets/images/project/project-3/3-1.png",
+          "Assets/images/project/project-3/3-2.png",
+          "Assets/images/project/project-3/3-3.png",
+          "Assets/images/project/project-3/3-4.png",
+        ],
+        4: [
+          "Assets/images/project/project-4/4-1.jpeg",
+          "Assets/images/project/project-4/4-2.jpeg",
+          "Assets/images/project/project-4/4-3.jpeg",
+          "Assets/images/project/project-4/4-4.jpeg",
+          "Assets/images/project/project-4/4-5.jpeg",
+        ],
+        5: [
+          "Assets/images/project/project-5/5-1.jpeg",
+          "Assets/images/project/project-5/5-2.jpeg",
+          "Assets/images/project/project-5/5-3.jpeg",
+          "Assets/images/project/project-5/5-4.jpeg",
+          "Assets/images/project/project-5/5-5.jpeg",
+          "Assets/images/project/project-5/5-6.jpeg",
+          "Assets/images/project/project-5/5-7.jpeg",
+          "Assets/images/project/project-5/5-8.jpeg",
+          "Assets/images/project/project-5/5-9.jpeg",
+          "Assets/images/project/project-5/5-10.jpeg",
+          "Assets/images/project/project-5/5-11.jpeg",
+          "Assets/images/project/project-5/5-12.jpeg",
+          "Assets/images/project/project-5/5-13.jpeg",
+        ],
+        6: [
+          "Assets/images/project/project-6/6-1.png",
+          "Assets/images/project/project-6/6-2.png",
+          "Assets/images/project/project-6/6-3.png",
+          "Assets/images/project/project-6/6-4.png",
+          "Assets/images/project/project-6/6-5.png",
+        ],
+        7: [
+          "Assets/images/project/project-7/7-1.png",
+          "Assets/images/project/project-7/7-2.png",
+          "Assets/images/project/project-7/7-3.png",
+          "Assets/images/project/project-7/7-4.png",
+          "Assets/images/project/project-7/7-5.png",
+          "Assets/images/project/project-7/7-6.png",
+        ],
+        8: [
+          "Assets/images/project/project-8/8-1.png",
+          "Assets/images/project/project-8/8-2.png",
+          "Assets/images/project/project-8/8-3.png",
+        ],
+      };
+      const currentSlides = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0 };
+      let activeModal = null;
+
+      // Enhance Modals Visually via JS
+      document.querySelectorAll('[id^="modal"]').forEach(modal => {
+        if(modal.id === "modal-backdrop") return;
+        modal.className = "relative bg-white/95 backdrop-blur-2xl border border-white/50 w-full max-w-4xl max-h-[90vh] flex flex-col rounded-[24px] md:rounded-[32px] overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.4)] hidden";
+        const closeBtn = modal.querySelector('button');
+        if(closeBtn) {
+          closeBtn.className = "w-10 h-10 bg-black/5 hover:bg-red-500 hover:text-white rounded-full flex items-center justify-center transition-all duration-300 text-slate-500 shrink-0";
+        }
+      });
+
+      function openModal(modalId) {
+        if (typeof lenis !== 'undefined') lenis.stop();
+        const backdrop = document.getElementById("modal-backdrop");
+        const modal = document.getElementById(modalId);
+
+        backdrop.classList.remove("hidden");
+        modal.classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+        activeModal = modalId;
+
+        const projectId = modalId.replace("modal", "");
+        updateSlide(projectId, 0);
+
+        // GSAP Animations
+        gsap.killTweensOf([backdrop, modal, modal.children]);
+        
+        gsap.fromTo(backdrop, 
+          { opacity: 0 }, 
+          { opacity: 1, duration: 0.4, ease: "power2.out" }
+        );
+        
+        gsap.fromTo(modal, 
+          { y: 60, scale: 0.9, opacity: 0 }, 
+          { y: 0, scale: 1, opacity: 1, duration: 0.6, ease: "back.out(1.2)" }
+        );
+
+        // Stagger animate modal contents (header and body)
+        gsap.fromTo(modal.children,
+          { y: 20, opacity: 0 },
+          { y: 0, opacity: 1, stagger: 0.15, duration: 0.5, delay: 0.2, ease: "power2.out" }
+        );
+      }
+
+      function closeModal() {
+        if (!activeModal) return;
+
+        const backdrop = document.getElementById("modal-backdrop");
+        const modal = document.getElementById(activeModal);
+
+        gsap.killTweensOf([backdrop, modal, modal.children]);
+
+        gsap.to(modal, { 
+          y: 40, scale: 0.95, opacity: 0, duration: 0.3, ease: "power2.in" 
+        });
+        
+        gsap.to(backdrop, { 
+          opacity: 0, 
+          duration: 0.3, 
+          delay: 0.1,
+          ease: "power2.inOut",
+          onComplete: () => {
+            backdrop.classList.add("hidden");
+            modal.classList.add("hidden");
+            document.body.style.overflow = "";
+            activeModal = null;
+            if (typeof lenis !== 'undefined') lenis.start();
+          }
+        });
+      }
+
+      // Close on clicking backdrop
+      document
+        .getElementById("modal-backdrop")
+        .addEventListener("click", (e) => {
+          if (e.target === document.getElementById("modal-backdrop")) {
+            closeModal();
+          }
+        });
+
+      // Handle Escape key
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && activeModal) {
+          closeModal();
+        }
+      });
+
+      function updateSlide(projectId, index) {
+        const images = projectImages[projectId];
+        if (index >= images.length) index = 0;
+        if (index < 0) index = images.length - 1;
+
+        currentSlides[projectId] = index;
+
+        const imgEl = document.getElementById(`carousel${projectId}-img`);
+        
+        // GSAP image transition effect
+        gsap.to(imgEl, {
+          opacity: 0,
+          scale: 0.95,
+          duration: 0.15,
+          ease: "power1.in",
+          onComplete: () => {
+            imgEl.src = images[index];
+            gsap.to(imgEl, { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out" });
+          }
+        });
+
+        const indicators = document.getElementById(
+          `carousel${projectId}-indicators`,
+        ).children;
+        for (let i = 0; i < indicators.length; i++) {
+          if (i === index) {
+            indicators[i].classList.remove("bg-white/50");
+            indicators[i].classList.add("bg-white", "w-4");
+          } else {
+            indicators[i].classList.add("bg-white/50");
+            indicators[i].classList.remove("bg-white", "w-4");
+          }
+        }
+      }
+
+      function nextSlide(projectId) {
+        updateSlide(projectId, currentSlides[projectId] + 1);
+      }
+
+      function prevSlide(projectId) {
+        updateSlide(projectId, currentSlides[projectId] - 1);
+      }
+    </script>
+  </body>
+</html>
