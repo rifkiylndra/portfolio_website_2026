@@ -304,27 +304,12 @@
           <h2 class="text-[#004cca] font-semibold text-[36px] tracking-[1.4px]">
             /SELECTED WORK
           </h2>
-          <div class="flex flex-wrap gap-4 mt-6">
-            <button
-              class="bg-[#1a1c1c] text-white px-6 py-2 rounded-full font-semibold text-sm"
-            >
-              All
-            </button>
-            <button
-              class="bg-[#f3f3f3] text-[#424656] px-6 py-2 rounded-full font-medium text-sm hover:bg-slate-200"
-            >
-              Data & AI
-            </button>
-            <button
-              class="bg-[#f3f3f3] text-[#424656] px-6 py-2 rounded-full font-medium text-sm hover:bg-slate-200"
-            >
-              Web Dev
-            </button>
-            <button
-              class="bg-[#f3f3f3] text-[#424656] px-6 py-2 rounded-full font-medium text-sm hover:bg-slate-200"
-            >
-              Mobile
-            </button>
+          <div class="flex flex-wrap gap-4 mt-6" id="filter-btns">
+            <button data-filter="all" class="filter-btn active-filter bg-[#1a1c1c] text-white px-6 py-2 rounded-full font-semibold text-sm transition-all duration-200">All</button>
+            <button data-filter="data-ai" class="filter-btn bg-[#f3f3f3] text-[#424656] px-6 py-2 rounded-full font-medium text-sm hover:bg-slate-200 transition-all duration-200">Data & AI</button>
+            <button data-filter="web-dev" class="filter-btn bg-[#f3f3f3] text-[#424656] px-6 py-2 rounded-full font-medium text-sm hover:bg-slate-200 transition-all duration-200">Web Dev</button>
+            <button data-filter="mobile" class="filter-btn bg-[#f3f3f3] text-[#424656] px-6 py-2 rounded-full font-medium text-sm hover:bg-slate-200 transition-all duration-200">Mobile</button>
+            <button data-filter="design" class="filter-btn bg-[#f3f3f3] text-[#424656] px-6 py-2 rounded-full font-medium text-sm hover:bg-slate-200 transition-all duration-200">Design</button>
           </div>
         </div>
         <a
@@ -351,140 +336,62 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 reveal" style="transition-delay: 200ms;">
-        <!-- Project 1 -->
-        <div
-          class="bg-white rounded-2xl shadow-lg shadow-black/5 overflow-hidden group hover:-translate-y-1 transition-transform flex flex-col"
+        <!-- Project 1: Web Dev -->
+        <div data-category="web-dev"
+          class="project-card bg-white rounded-2xl shadow-lg shadow-black/5 overflow-hidden group hover:-translate-y-1 transition-transform flex flex-col"
         >
-          <div
-            class="h-[215px] bg-slate-200 w-full overflow-hidden relative cursor-pointer"
-            onclick="openModal('modal1')"
-          >
-            <img
-              src="Assets/images/project/project-1/1-1.png"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-            <div
-              class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
-            >
-              <span
-                class="text-white font-bold tracking-wider uppercase text-sm border border-white px-4 py-2 rounded-full backdrop-blur-sm"
-                >Lihat Project</span
-              >
+          <div class="h-[215px] bg-slate-200 w-full overflow-hidden relative cursor-pointer" onclick="openModal('modal1')">
+            <img src="Assets/images/project/project-1/1-1.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="text-white font-bold tracking-wider uppercase text-sm border border-white px-4 py-2 rounded-full backdrop-blur-sm">Lihat Project</span>
             </div>
           </div>
           <div class="p-8 flex-1 flex flex-col">
-            <span
-              class="text-[#004cca] font-bold text-xs tracking-wider uppercase"
-              >HTML5 • CSS3 • Bootstrap</span
-            >
-            <h3
-              class="font-jakarta font-bold text-[24px] text-[#1a1c1c] mt-2 mb-3"
-            >
-              Website Laboratorium Informatika
-            </h3>
-            <p class="text-[#424656] text-base leading-relaxed mb-6">
-              Desain terpadu website untuk Laboratorium Informatika Universitas
-              Andalas.
-            </p>
-            <button
-              onclick="openModal('modal1')"
-              class="mt-auto bg-[#1a1c1c] text-white px-6 py-2 rounded-full font-semibold text-sm hover:bg-black transition-colors self-start shadow"
-            >
-              Lihat Project
-            </button>
+            <span class="text-[#004cca] font-bold text-xs tracking-wider uppercase">HTML5 • CSS3 • Bootstrap</span>
+            <h3 class="font-jakarta font-bold text-[24px] text-[#1a1c1c] mt-2 mb-3">Website Laboratorium Informatika</h3>
+            <p class="text-[#424656] text-base leading-relaxed mb-6">Desain terpadu website untuk Laboratorium Informatika Universitas Andalas.</p>
+            <button onclick="openModal('modal1')" class="mt-auto bg-[#1a1c1c] text-white px-6 py-2 rounded-full font-semibold text-sm hover:bg-black transition-colors self-start shadow">Lihat Project</button>
           </div>
         </div>
 
-        <!-- Project 2 -->
-        <div
-          class="bg-white rounded-2xl shadow-lg shadow-black/5 overflow-hidden group hover:-translate-y-1 transition-transform flex flex-col"
+        <!-- Project 2: Web Dev -->
+        <div data-category="web-dev"
+          class="project-card bg-white rounded-2xl shadow-lg shadow-black/5 overflow-hidden group hover:-translate-y-1 transition-transform flex flex-col"
         >
-          <div
-            class="h-[215px] bg-slate-200 w-full overflow-hidden relative cursor-pointer"
-            onclick="openModal('modal2')"
-          >
-            <img
-              src="Assets/images/project/project-2/2-1.png"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-            <div
-              class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
-            >
-              <span
-                class="text-white font-bold tracking-wider uppercase text-sm border border-white px-4 py-2 rounded-full backdrop-blur-sm"
-                >Lihat Project</span
-              >
+          <div class="h-[215px] bg-slate-200 w-full overflow-hidden relative cursor-pointer" onclick="openModal('modal2')">
+            <img src="Assets/images/project/project-2/2-1.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="text-white font-bold tracking-wider uppercase text-sm border border-white px-4 py-2 rounded-full backdrop-blur-sm">Lihat Project</span>
             </div>
           </div>
           <div class="p-8 flex-1 flex flex-col">
-            <span
-              class="text-[#004cca] font-bold text-xs tracking-wider uppercase"
-              >Java Development</span
-            >
-            <h3
-              class="font-jakarta font-bold text-[24px] text-[#1a1c1c] mt-2 mb-3"
-            >
-              Aplikasi Laundry
-            </h3>
-            <p class="text-[#424656] text-base leading-relaxed mb-6">
-              Sistem manajemen operasional laundry komprehensif menggunakan
-              bahasa pemrograman Java.
-            </p>
-            <button
-              onclick="openModal('modal2')"
-              class="mt-auto bg-[#1a1c1c] text-white px-6 py-2 rounded-full font-semibold text-sm hover:bg-black transition-colors self-start shadow"
-            >
-              Lihat Project
-            </button>
+            <span class="text-[#004cca] font-bold text-xs tracking-wider uppercase">Java Development</span>
+            <h3 class="font-jakarta font-bold text-[24px] text-[#1a1c1c] mt-2 mb-3">Aplikasi Laundry</h3>
+            <p class="text-[#424656] text-base leading-relaxed mb-6">Sistem manajemen operasional laundry komprehensif menggunakan bahasa pemrograman Java.</p>
+            <button onclick="openModal('modal2')" class="mt-auto bg-[#1a1c1c] text-white px-6 py-2 rounded-full font-semibold text-sm hover:bg-black transition-colors self-start shadow">Lihat Project</button>
           </div>
         </div>
 
-        <!-- Project 3 -->
-        <div
-          class="bg-white rounded-2xl shadow-lg shadow-black/5 overflow-hidden group hover:-translate-y-1 transition-transform flex flex-col"
+        <!-- Project 3: Web Dev -->
+        <div data-category="web-dev"
+          class="project-card bg-white rounded-2xl shadow-lg shadow-black/5 overflow-hidden group hover:-translate-y-1 transition-transform flex flex-col"
         >
-          <div
-            class="h-[215px] bg-slate-200 w-full overflow-hidden relative cursor-pointer"
-            onclick="openModal('modal3')"
-          >
-            <img
-              src="Assets/images/project/project-3/3-3.png"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-            <div
-              class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
-            >
-              <span
-                class="text-white font-bold tracking-wider uppercase text-sm border border-white px-4 py-2 rounded-full backdrop-blur-sm"
-                >Lihat Project</span
-              >
+          <div class="h-[215px] bg-slate-200 w-full overflow-hidden relative cursor-pointer" onclick="openModal('modal3')">
+            <img src="Assets/images/project/project-3/3-3.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="text-white font-bold tracking-wider uppercase text-sm border border-white px-4 py-2 rounded-full backdrop-blur-sm">Lihat Project</span>
             </div>
           </div>
           <div class="p-8 flex-1 flex flex-col">
-            <span
-              class="text-[#004cca] font-bold text-xs tracking-wider uppercase"
-              >Design Web • React</span
-            >
-            <h3
-              class="font-jakarta font-bold text-[24px] text-[#1a1c1c] mt-2 mb-3"
-            >
-              Weather App
-            </h3>
-            <p class="text-[#424656] text-base leading-relaxed mb-6">
-              Aplikasi pendeteksi cuaca interaktif berbasis web yang dibangun
-              dengan framework ReactJS.
-            </p>
-            <button
-              onclick="openModal('modal3')"
-              class="mt-auto bg-[#1a1c1c] text-white px-6 py-2 rounded-full font-semibold text-sm hover:bg-black transition-colors self-start shadow"
-            >
-              Lihat Project
-            </button>
+            <span class="text-[#004cca] font-bold text-xs tracking-wider uppercase">Design Web • React</span>
+            <h3 class="font-jakarta font-bold text-[24px] text-[#1a1c1c] mt-2 mb-3">Weather App</h3>
+            <p class="text-[#424656] text-base leading-relaxed mb-6">Aplikasi pendeteksi cuaca interaktif berbasis web yang dibangun dengan framework ReactJS.</p>
+            <button onclick="openModal('modal3')" class="mt-auto bg-[#1a1c1c] text-white px-6 py-2 rounded-full font-semibold text-sm hover:bg-black transition-colors self-start shadow">Lihat Project</button>
           </div>
         </div>
 
-        <!-- Project 4 -->
-        <div class="bg-white rounded-2xl shadow-lg shadow-black/5 overflow-hidden group hover:-translate-y-1 transition-transform flex flex-col">
+        <!-- Project 4: Mobile -->
+        <div data-category="mobile" class="project-card bg-white rounded-2xl shadow-lg shadow-black/5 overflow-hidden group hover:-translate-y-1 transition-transform flex flex-col">
           <div class="h-[215px] bg-slate-200 w-full overflow-hidden relative cursor-pointer" onclick="openModal('modal4')">
             <img src="Assets/images/project/project-4/4-1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -501,8 +408,8 @@
           </div>
         </div>
 
-        <!-- Project 5 -->
-        <div class="bg-white rounded-2xl shadow-lg shadow-black/5 overflow-hidden group hover:-translate-y-1 transition-transform flex flex-col">
+        <!-- Project 5: Data & AI -->
+        <div data-category="data-ai" class="project-card bg-white rounded-2xl shadow-lg shadow-black/5 overflow-hidden group hover:-translate-y-1 transition-transform flex flex-col">
           <div class="h-[215px] bg-slate-200 w-full overflow-hidden relative cursor-pointer" onclick="openModal('modal5')">
             <img src="Assets/images/project/project-5/5-1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -519,8 +426,8 @@
           </div>
         </div>
 
-        <!-- Project 6 -->
-        <div class="bg-white rounded-2xl shadow-lg shadow-black/5 overflow-hidden group hover:-translate-y-1 transition-transform flex flex-col">
+        <!-- Project 6: Data & AI -->
+        <div data-category="data-ai" class="project-card bg-white rounded-2xl shadow-lg shadow-black/5 overflow-hidden group hover:-translate-y-1 transition-transform flex flex-col">
           <div class="h-[215px] bg-slate-200 w-full overflow-hidden relative cursor-pointer" onclick="openModal('modal6')">
             <img src="Assets/images/project/project-6/6-1.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Choropleth Map Sumbar" />
             <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -537,8 +444,8 @@
           </div>
         </div>
 
-        <!-- Project 7 -->
-        <div class="bg-white rounded-2xl shadow-lg shadow-black/5 overflow-hidden group hover:-translate-y-1 transition-transform flex flex-col">
+        <!-- Project 7: Data & AI -->
+        <div data-category="data-ai" class="project-card bg-white rounded-2xl shadow-lg shadow-black/5 overflow-hidden group hover:-translate-y-1 transition-transform flex flex-col">
           <div class="h-[215px] bg-slate-200 w-full overflow-hidden relative cursor-pointer" onclick="openModal('modal7')">
             <img src="Assets/images/project/project-7/7-1.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Financial & Equity Dashboard" />
             <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -555,8 +462,8 @@
           </div>
         </div>
 
-        <!-- Project 8 -->
-        <div class="bg-white rounded-2xl shadow-lg shadow-black/5 overflow-hidden group hover:-translate-y-1 transition-transform flex flex-col">
+        <!-- Project 8: Design -->
+        <div data-category="design" class="project-card bg-white rounded-2xl shadow-lg shadow-black/5 overflow-hidden group hover:-translate-y-1 transition-transform flex flex-col">
           <div class="h-[215px] bg-slate-200 w-full overflow-hidden relative cursor-pointer" onclick="openModal('modal8')">
             <img src="Assets/images/project/project-8/8-1.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="PhotoBox Web" />
             <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -1514,6 +1421,39 @@
       
       document.querySelectorAll(".reveal").forEach((el) => {
         scrollObserver.observe(el);
+      });
+
+      // --- Project Filter Logic ---
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const projectCards = document.querySelectorAll('.project-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
+
+          // Update active button style
+          filterBtns.forEach(b => {
+            b.classList.remove('bg-[#1a1c1c]', 'text-white', 'font-semibold');
+            b.classList.add('bg-[#f3f3f3]', 'text-[#424656]', 'font-medium');
+          });
+          btn.classList.add('bg-[#1a1c1c]', 'text-white', 'font-semibold');
+          btn.classList.remove('bg-[#f3f3f3]', 'text-[#424656]', 'font-medium');
+
+          // Filter cards with GSAP animation
+          projectCards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            const match = filter === 'all' || category === filter;
+
+            if (match) {
+              card.style.display = 'flex';
+              gsap.fromTo(card, { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.4, ease: 'power2.out' });
+            } else {
+              gsap.to(card, { opacity: 0, scale: 0.9, duration: 0.2, ease: 'power2.in', onComplete: () => {
+                card.style.display = 'none';
+              }});
+            }
+          });
+        });
       });
 
       // Mobile Menu Logic
