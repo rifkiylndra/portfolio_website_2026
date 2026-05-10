@@ -137,24 +137,34 @@
         </button>
       </div>
 
-      <!-- Mobile Menu Overlay -->
-      <div id="mobile-menu" class="fixed inset-0 bg-white/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-opacity duration-300">
-        <a href="#selected-works" class="mobile-nav-link text-2xl font-bold text-[#1a1c1c] hover:text-[#0062ff]">Portfolio</a>
-        <a href="#core-competencies" class="mobile-nav-link text-2xl font-bold text-[#1a1c1c] hover:text-[#0062ff]">Skills</a>
-        <a href="#experience" class="mobile-nav-link text-2xl font-bold text-[#1a1c1c] hover:text-[#0062ff]">Experience</a>
-        <a
-          href="mailto:rifkiyuliandra875@gmail.com"
-          class="sm:hidden bg-[#0062ff] text-white px-8 py-3 rounded-full font-semibold text-xl hover:bg-blue-700 mt-4"
-        >
-          Let's Talk
-        </a>
-      </div>
     </nav>
+
+    <!-- Mobile Menu Overlay (outside nav to avoid z-index stacking issues) -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-[999] flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-opacity duration-300">
+      <!-- Close Button -->
+      <button id="mobile-menu-close" class="absolute top-6 right-6 w-10 h-10 flex items-center justify-center text-[#1a1c1c] hover:text-[#0062ff] transition-colors">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <!-- Logo inside menu -->
+      <span class="absolute top-6 left-6 font-bold text-2xl tracking-tighter text-[#1a1c1c]">RY.</span>
+      <!-- Nav Links -->
+      <a href="#selected-works" class="mobile-nav-link text-2xl font-bold text-[#1a1c1c] hover:text-[#0062ff] transition-colors">Portfolio</a>
+      <a href="#core-competencies" class="mobile-nav-link text-2xl font-bold text-[#1a1c1c] hover:text-[#0062ff] transition-colors">Skills</a>
+      <a href="#experience" class="mobile-nav-link text-2xl font-bold text-[#1a1c1c] hover:text-[#0062ff] transition-colors">Experience</a>
+      <a
+        href="mailto:rifkiyuliandra875@gmail.com"
+        class="bg-[#0062ff] text-white px-8 py-3 rounded-full font-semibold text-xl hover:bg-blue-700 transition-colors mt-4"
+      >
+        Let's Talk
+      </a>
+    </div>
 
     <!-- Header - Hero Section -->
     <header
       id="hero"
-      class="relative w-full max-w-[1356px] mx-auto min-h-[685px] pt-[76px] flex flex-col justify-end pb-12 px-6 md:px-8 overflow-hidden"
+      class="relative w-full max-w-[1356px] mx-auto min-h-[950px] md:min-h-[685px] pt-[76px] flex flex-col justify-end pb-12 px-6 md:px-8 overflow-hidden"
     >
       <!-- Giant Typography Background Marquee -->
       <div class="absolute top-32 left-0 w-full z-0 whitespace-nowrap overflow-hidden marquee-wrapper" id="hero-marquee">
